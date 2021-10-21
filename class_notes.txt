@@ -1,0 +1,423 @@
+Day - 1
+*******
+
+Domain  : ECommerce
+
+
+Duration : 45days + 1week
+
+
+Content:
+
+
+1) MEAN Stack Development
+
+M - MongoDB
+
+E - ExpressJS
+
+A - Angular
+
+N - NodeJS
+
+
+2) State Management 
+
+    NgRx Package
+
+
+3) RxJS Package
+
+    asynchronous calls
+
+
+4) Single Page Applications
+
+
+5) Lazy Loading & Eager Loading
+
+6) Modules Communication
+
+    Shared Module Communication
+
+7) Cloud
+
+    AWS Deployment
+
+        Amazon Web Services
+
+    Heroku Deployment
+
+    CI / CD Process
+
+    Continuous Integration and Continuous Deployment
+
+
+8) 3rd party API'S Integration
+
+    Paypal Integration
+
+    Stripe Payment intregration
+
+    GPay Integration
+
+    Phonepe / Paytm Integration
+
+
+9) Social Networks Integration
+
+    Gmail
+
+    Facebook
+
+    Twitter
+
+
+10) Design
+
+    CSS3 Flex Box, Grid Box, RWD(Responsive Web Design)
+
+
+11) Test Cases
+
+    karma with jasmine
+
+
+12) Authentication & Authorization
+
+    JWT Integration
+
+    bcrypt
+
+    passportjs
+
+    oAuth2
+
+
+
+Day - 2
+*******
+
+    Home Screen Design
+    ++++++++++++++++++
+
+Frontend : Angular 13
+
+Backend  : NodeJS
+
+DataBase : MongoDB (MongoDB Atlas) (Cloud DataBase)
+
+Rest     : ExpressJS
+
+Cloud    : AWS
+
+
+=> create the AWS Account
+
+Link : https://portal.aws.amazon.com/billing/signup#/start
+
+
+=> deploy images to AWS S3 Bucket
+
+    Image_1 : https://ecommerce-7am.s3.us-east-2.amazonaws.com/p1.jpg
+
+    Image_2 : https://ecommerce-7am.s3.us-east-2.amazonaws.com/p2.jpg
+
+    Image_3 : https://ecommerce-7am.s3.us-east-2.amazonaws.com/p3.jpg
+
+    Image_4 : https://ecommerce-7am.s3.us-east-2.amazonaws.com/p4.jpg
+
+    Image_5 : https://ecommerce-7am.s3.us-east-2.amazonaws.com/p5.jpg
+
+    Image_6 : https://ecommerce-7am.s3.us-east-2.amazonaws.com/p6.jpg
+
+
+=> MongoDB
+
+    - MongoDB is "NoSQL" DataBase.
+
+    - MongoDB DataBase Supports "JSON".
+
+    - MongoDB DataBase follows the "mongodb" protocol.
+
+    - MongoDB DataBase by default Running on 27017 Port Number
+
+    SQL                                                     NoSQL
+************************************************************************                                                       
+Ex.                                                 Ex.
+    Oracle                                              MongoDB
+
+    MySQL                                               CassandraDB
+
+    SQLServer                                           CouchDB
+
+
+
+DataBases                                               DataBases
+
+Tables                                                  Collections
+
+Primary Key                                             _id
+
+Rows                                                    document
+************************************************************************
+
+=> create the Account with MongoDB
+
+    Link : https://www.mongodb.com/try
+
+
+=> insert images path to "mongodb" DataBase
+
+    DataBase Name : ecommerce-7am
+
+    Collection Name : products
+
+    Password        : admin
+
+    Connection URL : mongodb+srv://admin:admin@miniprojectdb.nzphu.mongodb.net/ecommerce-7am?retryWrites=true&w=majority
+
+
+Day - 3
+*******
+
+    prepare backend application, connect to mongodb DataBase and Fetch the data from DataBase
+
+=> create the folder
+
+    Ex.
+        backend
+
+=> switch to folder
+
+    > cd backend
+
+
+=> download libraries
+
+        1) express
+
+            Rest API'S ----  GET,POST,PUT,DELETE,..........
+
+
+        2) mongoose
+
+            connect to mongodb DataBase
+
+        3) cors
+
+            enable the cors policy
+
+
+        > yarn add express mongoose cors
+
+                (or)
+
+        > npm i express mongoose cors
+
+
+=> prepare model
+
+        +++++++++++++++++++++++++++++++++++++
+        backend
+              model
+                 product.js
+        ++++++++++++++++++++++++++++++++++++
+
+        finally "Product" model is ready
+
+
+=> prepare the rest api.
+
+    server.js
+
+
+
+
+Day - 4
+*******
+
+Develop the Rest API
+
+(Fetch the data from MongoDB DataBase)
+
+
+Finally Rest API is Ready.
+
+
+http://localhost:8080/api/products.
+
+
+
+> ng new frontend
+
+
+> cd frontend
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
