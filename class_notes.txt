@@ -258,6 +258,156 @@ http://localhost:8080/api/products.
 
 
 
+Day - 5
+*******
+start the node server
+
+> cd backend
+
+> node server
+
+
+test the rest api call with Postman
+
+> http://localhost:8080/api/products
+
+
+create angular application
+
+> ng new frontend
+
+
+switch to angular application
+
+> cd frontend
+
+
+download the node modules
+
+   - angular is component based framework.
+
+   - we can create more than one component.
+
+   - as a angular developer, we can provide Communication between components.
+
+        1) @Input()
+
+        2) @Output()
+
+        3) @ViewChild()
+
+        4) @ViewChildren()
+
+    - Communication between components are difficult, while incresing the complexity of projects.
+
+    - to reduce complexity we have state Management in Angular.
+
+    - we will implement state Management by using NgRx package.
+
+
+
+    1) @ngrx/store
+
+    2) @ngrx/effects
+
+
+    > yarn add @ngrx/store @ngrx/effects
+
+                or
+
+    > npm i @ngrx/store @ngrx/effects
+
+
+implement the NgRx Architecture
+*******************************
+
+=> types
+
+=> actions
+
+=> effects
+
+=> reducer
+
+=> store
+
+=> dispatch
+
+=> subscribe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
