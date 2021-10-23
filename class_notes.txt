@@ -336,6 +336,51 @@ implement the NgRx Architecture
 => subscribe
 
 
+Day-6
+*****
+
+1) create the model based on rest api call.
+
+**************************************
+frontend
+       src
+         app
+           HomeModule
+                   model
+                      product.model.ts
+**************************************
+    finally "Product" model is ready
+
+
+
+2) create the service
+
+*******************************************
+frontend
+       src
+         app
+           HomeModule
+                services
+                    product.service.ts
+******************************************
+    finally "ProductsService" is ready with "getProducts()"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
