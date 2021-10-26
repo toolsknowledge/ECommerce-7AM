@@ -367,14 +367,55 @@ frontend
 
 
 
+Day-7
+*****
+
+create the types
+
+***********************************************
+frontend
+       src
+         app
+           HomeModule
+                    types
+                       product.types.ts
+***********************************************
+    finally 1) PRODUCTS_LOADING
+            2) PRODUCTS_LOADING_SUCCESS
+            3) PRODUCTS_LOADING_FAIL       types are ready
 
 
 
 
+create the actions
+
+***********************************************************
+frontend
+       src
+         app
+           HomeModule
+                actions
+                  product.actions.ts
+***********************************************************
+
+    - finally   1) ProductsLoading
+
+                2) ProductsLoadingSuccess     <=== result coming from effects
+
+                3) ProductsLoadingFail <=== result coming from effects     actions are ready
 
 
+create the effects
 
 
+********************************************************************
+frontend
+       src
+         app
+           HomeModule
+               effects
+                 product.effects.ts
+********************************************************************
 
 
 
