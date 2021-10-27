@@ -366,277 +366,85 @@ frontend
     finally "ProductsService" is ready with "getProducts()"
 
 
-
 Day-7
 *****
 
-create the types
+prepare the types
 
-***********************************************
+
+*********************************************
 frontend
        src
          app
            HomeModule
                     types
-                       product.types.ts
-***********************************************
-    finally 1) PRODUCTS_LOADING
-            2) PRODUCTS_LOADING_SUCCESS
-            3) PRODUCTS_LOADING_FAIL       types are ready
+                        product.types.ts
+********************************************
+
+    finally following types are ready.
+
+    1) PRODUCTS_LIST
+
+    2) PRODUCTS_LIST_SUCCESS
+
+    3) PRODUCTS_LIST_FAIL
 
 
+prepare the actions
+
+*************************************************
+frontend
+       src
+         app
+           HomeModule
+                   actions
+                      product.actions.ts
+************************************************
+
+    finally following actions are ready.
+
+    1) ProductsList
+
+    2) ProductsListSuccess
+
+    3) ProductsListFail
 
 
-create the actions
+prepare effects
+
+*******************************************************
+frontend
+      src
+       app
+        HomeModule
+           effects
+              product.effects.ts
+*****************************************************
+
+
+prepare reducer
+
+********************************************************
+frontend
+      src
+        app
+          HomeModule
+             reducer
+                product.reducer.ts
+*******************************************************
+    finally "ProductReducer" is ready
+
+
+deploy reducer to store itself.
 
 ***********************************************************
 frontend
        src
          app
            HomeModule
-                actions
-                  product.actions.ts
+               module
+                 home.module.ts
 ***********************************************************
-
-    - finally   1) ProductsLoading
-
-                2) ProductsLoadingSuccess     <=== result coming from effects
-
-                3) ProductsLoadingFail <=== result coming from effects     actions are ready
-
-
-create the effects
-
-
-********************************************************************
-frontend
-       src
-         app
-           HomeModule
-               effects
-                 product.effects.ts
-********************************************************************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
