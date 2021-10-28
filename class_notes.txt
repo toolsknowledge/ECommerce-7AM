@@ -435,7 +435,7 @@ frontend
     finally "ProductReducer" is ready
 
 
-deploy reducer to store itself.
+deploy reducer to store.
 
 ***********************************************************
 frontend
@@ -445,6 +445,56 @@ frontend
                module
                  home.module.ts
 ***********************************************************
+
+
+create the selector
+
+**********************************************************
+frontend
+       src
+         app
+           HomeModule
+                  selector
+                     product.selector.ts
+**********************************************************
+
+    finally "productsListSelector" is ready
+
+
+perform "dispatch" and "subscribe" in component
+
+***********************************************************
+frontend
+       src
+         app
+           HomeModule
+                component
+                   home.component.ts
+                   home.component.html
+***********************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
