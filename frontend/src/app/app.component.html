@@ -1,1 +1,28 @@
-<router-outlet></router-outlet>
+<!--
+    1) grid-container
+
+    2) row
+
+    3) brand
+
+    4) center
+-->
+<div class="grid-container">
+    <header class="row">
+        <div>
+            <a href="#" class="brand">AshokIT</a>
+        </div>
+        <div class="responsive">
+            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+            <a href="#"><i class="fa fa-user-circle-o"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+
+    <footer class="row center">
+        copyright@ashokit.in
+    </footer>
+</div>

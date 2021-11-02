@@ -473,6 +473,27 @@ frontend
                    home.component.html
 ***********************************************************
 
+Day-9
+******
+implement the App Component CSS Design
+
+
+
+Day-12
+******
+create the rating bar component
+
+*********************************************
+frontend
+       src
+         app
+            components
+                rating.component.ts
+                rating.component.html
+********************************************
+
+
+
 
 
 
