@@ -4,11 +4,12 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsComponent } from "../components/products.components";
 import { ProductEffects } from "../effects/product.effects";
 import { ProductReducer } from "../reducer/product.reducer";
 import { ProductsService } from "../services/product.service";
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
     declarations:[ProductsComponent],
@@ -16,7 +17,8 @@ import { ProductsService } from "../services/product.service";
              HttpClientModule,
              RouterModule.forChild([{path:"",component:ProductsComponent}]),
              EffectsModule.forFeature([ProductEffects]),
-             StoreModule.forFeature("products",ProductReducer)],
+             StoreModule.forFeature("products",ProductReducer),
+             NgxSpinnerModule],
     providers:[ProductsService],
     exports:[ProductsComponent]
 })
