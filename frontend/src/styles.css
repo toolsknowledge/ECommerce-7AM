@@ -1,4 +1,4 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
 
 
 html{
@@ -40,6 +40,7 @@ footer{
 }
 .row{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -68,8 +69,25 @@ a:hover{
     color: #404040;
 }
 
+.card{
+    background-color: #c0c0c0;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
 
+img.medium{
+    max-width: 29rem;
+}
 
+h2{
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.card-body>*{
+    margin-bottom: 0.5rem;
+}
 
 
 

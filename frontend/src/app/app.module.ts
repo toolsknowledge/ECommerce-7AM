@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { AppComponent } from './app.component';
+import { ProductsComponent } from './components/products.component';
 import { RatingComponent } from './components/rating.component';
 
 @NgModule({

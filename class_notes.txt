@@ -495,9 +495,17 @@ frontend
 
 Day-13
 ******
-    include spinner
+send "products" array from "HomeScreen" to "Products" component.
 
-
+//Note : ProductsComponent register in HomeModule
+********************************************
+frontend
+        src
+           app
+              components
+                  products.component.ts
+                  product.component.html
+*********************************************
 
 
 
