@@ -11,16 +11,21 @@ import { ProductReducer } from "../reducer/product.reducer";
 import { ProductsService } from "../services/product.service";
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ProductsComponent } from "src/app/components/products.component";
+import { LoadingComponent } from "src/app/components/loading.component";
+import { MessageComponent } from "src/app/components/message.component";
 
 @NgModule({
     declarations:[HomeComponent,
-                  ProductsComponent],
+                  ProductsComponent,
+                  LoadingComponent,
+                  MessageComponent],
     imports:[CommonModule,
              HttpClientModule,
              RouterModule.forChild([{path:"",component:HomeComponent}]),
              EffectsModule.forFeature([ProductEffects]),
              StoreModule.forFeature("products",ProductReducer),
-             NgxSpinnerModule],
+             NgxSpinnerModule,
+             ],
     providers:[ProductsService],
     exports:[HomeComponent]
 })

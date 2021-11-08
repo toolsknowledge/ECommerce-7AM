@@ -15,11 +15,13 @@ export class HomeComponent{
     loading:boolean;
     products:Product[];
     error:string;
+    danger:string;
     constructor(private store:Store<ProductsListState>,
                 private ngxSpinnerService:NgxSpinnerService){
         this.loading = false;
         this.products = [];
         this.error = "";
+        this.danger = "danger";
     }
     
     ngOnInit(){

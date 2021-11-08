@@ -1,20 +1,14 @@
-<products [products]="products"></products>
+<div *ngIf="!loading;else elseBlock">
+    <loading-component></loading-component>
+</div>
+
+<ng-template #elseBlock>
+    <div *ngIf="error == 'Network Fail';else productsBlock">
+        <alert-component [variant]="danger" [message]="error"></alert-component>
+    </div>
+</ng-template>
 
 
-<!-- <div *ngIf="loading;else elseBlock"> -->
-
-<!-- <h1>{{loading}}</h1>
-<h1>{{products | json}}</h1>
-<h1>{{error}}</h1> -->
-
-<!-- <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
-    <p style="color: white">Please Wait. </p>  
-</ngx-spinner> -->
-
-<!-- </div> -->
-
-<!-- <ng-template #elseBlock>
-    <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="default" type="ball-spin-clockwise">  
-        <p style="color: white">Please Wait. </p>  
-    </ngx-spinner>
-</ng-template> -->
+<ng-template #productsBlock>
+    <products [products]="products"></products>
+</ng-template>

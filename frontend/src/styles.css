@@ -89,6 +89,19 @@ h2{
     margin-bottom: 0.5rem;
 }
 
+.spin-class{
+    font-size: 10rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+
+
+
+
+
 
 
 
