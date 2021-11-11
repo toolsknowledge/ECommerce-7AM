@@ -13,18 +13,22 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { ProductsComponent } from "src/app/components/products.component";
 import { LoadingComponent } from "src/app/components/loading.component";
 import { MessageComponent } from "src/app/components/message.component";
+import { BarRatingModule } from "ngx-bar-rating";
+import { RatingComponent } from "src/app/components/rating.component";
 
 @NgModule({
     declarations:[HomeComponent,
                   ProductsComponent,
                   LoadingComponent,
-                  MessageComponent],
+                  MessageComponent,
+                  RatingComponent],
     imports:[CommonModule,
              HttpClientModule,
              RouterModule.forChild([{path:"",component:HomeComponent}]),
              EffectsModule.forFeature([ProductEffects]),
              StoreModule.forFeature("products",ProductReducer),
-             NgxSpinnerModule,
+            //  BarRatingModule,
+            //  NgxSpinnerModule,
              ],
     providers:[ProductsService],
     exports:[HomeComponent]

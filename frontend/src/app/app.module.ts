@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
+import { BarRatingModule } from 'ngx-bar-rating';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './components/products.component';
 import { RatingComponent } from './components/rating.component';
@@ -17,6 +18,7 @@ import { RatingComponent } from './components/rating.component';
     EffectsModule.forRoot([]),
     StoreModule.forRoot({}),
     HttpClientModule,
+    BarRatingModule,
     RouterModule.forRoot([{path:"",loadChildren:()=>import("./HomeModule/module/home.module").then(posRes=>posRes.HomeModule)}])
   ],
   providers: [],

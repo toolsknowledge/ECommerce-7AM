@@ -7,7 +7,11 @@ import { Component, Input } from "@angular/core";
 
 export class ProductsComponent{
     @Input() products:any[];
+    rate:any;
+    max:any;
     constructor(){
         this.products = [];
+        this.rate=0;
+        this.max=5;
     }   
 }

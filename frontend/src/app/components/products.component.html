@@ -4,9 +4,10 @@
             <img src={{product.image}} alt={{product.name}} class="medium">
             <div class="card-body">
                 <h2>{{product.name}}</h2>
-                <p>Rating...{{product.rating}}</p>
+                <!-- {{product.rating}}.....{{product.numReviews}} -->
+                <app-rating [rating]="product.rating" [numReviews]="product.numReviews"></app-rating>
                 <div class="price">
-                    <span>Cost...{{product.cost}}</span>
+                    <span [ngClass]="{'high-price':product.cost>250, 'regional-price':product.cost<250}">Price ${{product.cost}}</span>
                 </div>
             </div>
         </div>

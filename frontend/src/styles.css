@@ -70,10 +70,10 @@ a:hover{
 }
 
 .card{
-    background-color: #c0c0c0;
-    border: 1px solid transparent;
-    border-radius: 0.5rem;
+    border: 0.3rem solid #c0c0c0;
+    background-color: #f8f8f8;
     margin: 1rem;
+    border-radius: 0.5rem;
 }
 
 img.medium{
@@ -85,9 +85,14 @@ h2{
     margin: 0;
 }
 
-.card-body>*{
+.card-body{
+    padding: 1rem;
+  }
+  
+  .card-body>*{
     margin-bottom: 0.5rem;
-}
+  }
+  
 
 .spin-class{
     font-size: 10rem;
@@ -97,6 +102,66 @@ h2{
     align-items: center;
     color: gray;
 }
+
+
+.alert{
+    
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    
+}
+
+.alert-danger{
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px;
+}
+
+
+.alert-info{
+    background-color:blue;
+    color: #ffffff;
+    padding: 10px;
+}
+
+
+.alert-success{
+    background-color: #00ff00;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.alert-success{
+    background-color: #808000;
+    color: #ffffff;
+    padding: 10px;
+}
+
+
+.app-rating span{
+    color: #f0c040;
+    margin: 0.1rem;
+}
+
+.app-rating span:last-child{
+    color: #404040;
+}
+
+.high-price{
+    font-size: 2rem;
+    color: red;
+}
+
+.regional-price{
+    font-size: 2rem;
+    color: green;
+}
+
+
+
+
+
+
 
 
 
