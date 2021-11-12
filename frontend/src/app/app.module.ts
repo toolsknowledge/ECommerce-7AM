@@ -19,7 +19,8 @@ import { RatingComponent } from './components/rating.component';
     StoreModule.forRoot({}),
     HttpClientModule,
     BarRatingModule,
-    RouterModule.forRoot([{path:"",loadChildren:()=>import("./HomeModule/module/home.module").then(posRes=>posRes.HomeModule)}])
+    RouterModule.forRoot([{path:"",loadChildren:()=>import("./HomeModule/module/home.module").then(posRes=>posRes.HomeModule)},
+    {path:"details/:id",loadChildren:()=>import("./DetailsModule/module/details.module").then(m=>m.DetailsModule)}])
   ],
   providers: [],
   bootstrap: [AppComponent]

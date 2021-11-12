@@ -508,6 +508,88 @@ frontend
 *********************************************
 
 
+Module2
+*******
+
+1) implement the rest api
+
+server.js
+*********
+
+> yarn add mongoose@5.12.13
+
+//set the json as MIME Type
+app.use(express.json());
+
+
+app.get("/api/products/:id",(req,res)=>{
+    let product = await Product.findOne(mongoose.Types.ObjectId(req.params.id));
+    res.send(product);
+});
+
+
+=> http://localhost:8080/api/products
+
+=> http://localhost:8080/api/products/{id}
+
+
+
+
+2) create the DetailsModule
+
+
+***********************************************
+frontend
+       src
+         app
+           DetailsModule
+                      components
+                            details.component.ts
+                            details.component.html
+
+                      module
+                            details.module.ts
+**************************************************
+
+
+3) implement the routing in app.module.ts 
+
+
+4) navigate from HomeScreen to DetailsScreen
+
+
+5) pass the id from HomeScreen to DetailsScreen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

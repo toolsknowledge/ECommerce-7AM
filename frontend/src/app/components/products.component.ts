@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
     selector:"products",
@@ -9,9 +10,15 @@ export class ProductsComponent{
     @Input() products:any[];
     rate:any;
     max:any;
-    constructor(){
+    constructor(private router:Router){
         this.products = [];
         this.rate=0;
         this.max=5;
-    }   
+    }
+    
+    navigateToDetailsScreen(id:any){
+        console.log(id);
+        this.router.navigate([`/details/${id}`]);
+ 
+    }
 }

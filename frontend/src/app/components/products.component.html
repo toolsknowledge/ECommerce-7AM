@@ -1,10 +1,10 @@
 <div class="row center">
     <div *ngFor="let product of products">
         <div class="card">
-            <img src={{product.image}} alt={{product.name}} class="medium">
+            <img src={{product.image}} alt={{product.name}} class="medium" (click)="navigateToDetailsScreen(product._id)">
             <div class="card-body">
-                <h2>{{product.name}}</h2>
-                <!-- {{product.rating}}.....{{product.numReviews}} -->
+                <h2 (click)="navigateToDetailsScreen(product._id)">{{product.name}}</h2>
+                
                 <app-rating [rating]="product.rating" [numReviews]="product.numReviews"></app-rating>
                 <div class="price">
                     <span [ngClass]="{'high-price':product.cost>250, 'regional-price':product.cost<250}">Price ${{product.cost}}</span>
