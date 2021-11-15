@@ -1,4 +1,4 @@
-import { Product } from "../model/product.model";
+import { Product } from "../../common/model/product.model";
 
 export interface ProductsListState{
     loading:boolean;

@@ -3,7 +3,7 @@ import { Actions,createEffect, ofType } from "@ngrx/effects";
 import { ProductsList, ProductsListFail, ProductsListSuccess } from "../actions/product.actions";
 import { ProductsService } from "../services/product.service";
 import { mergeMap,map,catchError } from "rxjs/operators";
-import { Product } from "../model/product.model";
+import { Product } from "../../common/model/product.model";
 import { of } from "rxjs";
 @Injectable({
     providedIn:"root"

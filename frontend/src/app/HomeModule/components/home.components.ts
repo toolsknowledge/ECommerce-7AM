@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { select, Store } from "@ngrx/store";
 import { NgxSpinnerService } from "ngx-spinner";
 import { ProductsList } from "../actions/product.actions";
-import { Product } from "../model/product.model";
+import { Product } from "../../common/model/product.model";
 import { productsListSelector } from "../selector/product.selector";
 import { ProductsListState } from "../state/product.state";
 
