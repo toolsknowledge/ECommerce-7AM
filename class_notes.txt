@@ -578,11 +578,11 @@ frontend
 
     => effects          Ex. DetailsEffects
 
-    => reducer
+    => state            Ex. DetailState
 
-    => state
-
-    => selector
+    => reducer          Ex. DetailReducer
+    
+    => selector         Ex. detailsSelector
 
     => dispatch & subscribe
 

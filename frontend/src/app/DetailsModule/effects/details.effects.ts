@@ -19,7 +19,8 @@ export class DetailsEffects{
         this.actions$.pipe(
             ofType(detailsLoading),
             mergeMap((action)=> this.service.getProductDetails(action.id).pipe(map((posRes:Product)=>{
-                return detailsLoadingSuccess(posRes);
+                console.log(action);
+                return detailsLoadingSuccess({"product":posRes});
             }),catchError((error)=>of(detailsLoadingFail({"error":"Network Fail"})))))
         )
     );
