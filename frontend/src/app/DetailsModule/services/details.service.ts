@@ -8,7 +8,6 @@ import { Product } from "src/app/common/model/product.model";
 export class DetailsService{
     constructor(private http:HttpClient){}
     public getProductDetails(id:any):Observable<Product>{
-        console.log(id);
         return this.http.get<Product>(`http://localhost:8080/api/products/${id}`);
     }
 }

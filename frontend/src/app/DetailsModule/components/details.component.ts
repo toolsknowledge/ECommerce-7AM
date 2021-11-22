@@ -13,12 +13,12 @@ import DetailState from "../state/detail.state";
 export class DetailsComponent{
     constructor(private route:ActivatedRoute,
                 private store:Store<DetailState>){
-        console.log( "id....",this.route.snapshot.params["id"] );
     }
 
     ngOnInit(){
         this.store.select(detailsSelector).subscribe((posRes)=>{
-            console.log(posRes);
+            //console.log(posRes);
+            
         });
 
         this.store.dispatch(detailsLoading(this.route.snapshot.params["id"]));

@@ -8,7 +8,8 @@ const initialState:DetailState = {
     error:""
 }
 
-const _detailReducer = createReducer(initialState,on(detailsLoading,(state)=>{
+const _detailReducer = createReducer(initialState,on(detailsLoading,(state,action)=>{
+    console.log("Hello......",action.id);
     return{
         ...state,
         loading:false,

@@ -27,6 +27,9 @@ app.get("/api/products",async (req,res)=>{
 
 
 app.get("/api/products/:id",async (req,res)=>{
+    if(req.params.id == undefined){
+        res.send({"msg":"no id detected"});
+    }
     const product = await Product.findOne(mongoose.Types.ObjectId(req.params.id));
     if(!product){
         res.status(300).send({"msg":"no product available"});
