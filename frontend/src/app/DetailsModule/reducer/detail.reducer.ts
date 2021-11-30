@@ -9,7 +9,7 @@ const initialState:DetailState = {
 }
 
 const _detailReducer = createReducer(initialState,on(detailsLoading,(state,action)=>{
-    console.log("Hello......",action.id);
+    //console.log("Hello......",action.key);
     return{
         ...state,
         loading:false,

@@ -5,17 +5,17 @@ import { RouterModule } from "@angular/router";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
 import { DetailsComponent } from "../components/details.component";
-import { DetailsEffects } from "../effects/details.effects";
+import { postEffects } from "../effects/product.effects";
 import { DetailReducer } from "../reducer/detail.reducer";
-
+import { DetailsService } from "../services/details.service";
 @NgModule({
     declarations:[DetailsComponent],
     imports:[CommonModule,
              HttpClientModule,
              RouterModule.forChild([{path:"",component:DetailsComponent}]),
-             EffectsModule.forFeature([DetailsEffects]),
+             EffectsModule.forFeature([postEffects]),
              StoreModule.forFeature("details",DetailReducer)],
-    providers:[],
+    providers:[DetailsService],
     exports:[DetailsComponent]
 })
 export class DetailsModule{}

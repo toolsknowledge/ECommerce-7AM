@@ -11,8 +11,11 @@ import DetailState from "../state/detail.state";
 })
 
 export class DetailsComponent{
+    private id:any;
     constructor(private route:ActivatedRoute,
                 private store:Store<DetailState>){
+        this.id = this.route.snapshot.params["id"];
+        console.log(this.id);
     }
 
     ngOnInit(){
@@ -21,6 +24,6 @@ export class DetailsComponent{
             
         });
 
-        this.store.dispatch(detailsLoading(this.route.snapshot.params["id"]));
+        this.store.dispatch(detailsLoading({"id":this.id}));
     }
 }
