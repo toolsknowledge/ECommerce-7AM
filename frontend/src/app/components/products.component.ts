@@ -18,7 +18,7 @@ export class ProductsComponent{
     
     navigateToDetailsScreen(id:any){
       
-        this.router.navigate([`/details/${id}`]);
+        this.router.navigate([`/description/${id}`]);
  
     }
 }

@@ -507,84 +507,143 @@ frontend
                   product.component.html
 *********************************************
 
+Module-2
+********
 
-Module2
-*******
+1) test the rest api with Postman
 
-1) implement the rest api
+    => http://localhost:8080/api/products/{id}
 
-server.js
-*********
-
-> yarn add mongoose@5.12.13
-
-//set the json as MIME Type
-app.use(express.json());
+2) edit the database and enter the "countInStock" field
 
 
-app.get("/api/products/:id",(req,res)=>{
-    let product = await Product.findOne(mongoose.Types.ObjectId(req.params.id));
-    res.send(product);
-});
+3) create the model
 
-
-=> http://localhost:8080/api/products
-
-=> http://localhost:8080/api/products/{id}
+        ***********************************************************
+        frontend
+                src
+                   app
+                      description-module
+                                    model
+                                        description.model.ts
+        ***********************************************************
+        finally "DescriptionModel" is ready.
 
 
 
+4) create the component
 
-2) create the DetailsModule
-
-
-***********************************************
-frontend
-       src
-         app
-           DetailsModule
-                      components
-                            details.component.ts
-                            details.component.html
-
-                      module
-                            details.module.ts
-**************************************************
+    *****************************************************************************
+    frontend
+            src
+               app
+                 description-module
+                                component
+                                    description.component.ts
+                                    description.component.html
+    *****************************************************************************
 
 
-3) implement the routing in app.module.ts 
+5) create the description-module
+
+        *****************************************************************************
+        frontend
+            src
+               app
+                 description-module
+                                module
+                                    description.module.ts
+        ********************************************************************************
+            finally "DescriptionModule" is ready
 
 
-4) navigate from HomeScreen to DetailsScreen
+
+6) navigate from HomeModule to DescriptionModule with "_id"
+
+        app.module.ts
+
+        product.component.ts
+
+        description.component.ts
 
 
-5) pass the id from HomeScreen to DetailsScreen
+7) create the service
+
+            *****************************************************************************
+            frontend
+                src
+                   app
+                     description-module
+                                    service
+                                        description.service.ts
+            ******************************************************************************
+                finally "DescriptionService" is ready with "getProductDetails(-)" function
 
 
-6) create the service
+8) implement the state management
 
-    detail.service.ts
+           types
+                description.types.ts 
 
-    finally "DetailsService" is ready
+                finally "DESCRIPTION", "DESCRIPTION_SUCCESS" and "DESCRIPTION_FAIL"
+
+            actions
+                description.action.ts
+                
+                finally "description", "descriptionSuccess" and "descriptionFail" actions are ready
+
+            effects
+                description.effects.ts
+
+                finally "DescriptionEffects" are ready
+
+            state
+                descriptions.state.ts
+
+                finally "DescriptionState" is ready
+
+            reducer
+                description.reducer.ts
+
+                finally "descriptionReducer" is ready
+
+            selector
+                description.selector.ts
+
+                finally "descriptionSelector" is ready
+
+9) complete the dispatch and subscription in DescriptionComponent
 
 
-7) implement the state management
 
-    => model            Ex. Product
 
-    => types            Ex. DETAILS_LOADING,DETAILS_LOADING_SUCCESS,DETAILS_LOADING_FAIL
 
-    => actions          Ex. detailsLoading,detailsLoadingSuccess, detailsLoadingFail        
 
-    => effects          Ex. DetailsEffects
 
-    => state            Ex. DetailState
 
-    => reducer          Ex. DetailReducer
-    
-    => selector         Ex. detailsSelector
 
-    => dispatch & subscribe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

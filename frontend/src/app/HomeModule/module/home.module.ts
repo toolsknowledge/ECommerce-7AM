@@ -31,6 +31,6 @@ import { RatingComponent } from "src/app/components/rating.component";
             //  NgxSpinnerModule,
              ],
     providers:[ProductsService],
-    exports:[HomeComponent]
+    exports:[HomeComponent,LoadingComponent]
 })
 export class HomeModule{}

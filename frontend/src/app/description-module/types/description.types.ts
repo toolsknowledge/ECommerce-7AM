@@ -1,0 +1,3 @@
+export const DESCRIPTION:string = "DESCRIPTION";
+export const DESCRIPTION_SUCCESS:string = "DESCRIPTION_SUCCESS";
+export const DESCRIPTION_FAIL:string = "DESCRIPTION_FAIL";
