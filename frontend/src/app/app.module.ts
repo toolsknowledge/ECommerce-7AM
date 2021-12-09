@@ -21,7 +21,7 @@ import { RatingComponent } from './components/rating.component';
     HttpClientModule,
     BarRatingModule,
     RouterModule.forRoot([{path:"",loadChildren:()=>import("./HomeModule/module/home.module").then(posRes=>posRes.HomeModule)},
-    {path:"description/:_id",loadChildren:()=>import("./description-module/module/description.module").then(m=>m.DescriptionModule)}
+    {path:"description/:_id",loadChildren:()=>import("./description-module/module/description.module1").then(posRes=>posRes.DescriptionModule1)}
  ])
   ],
   providers: [],
