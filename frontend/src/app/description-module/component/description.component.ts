@@ -14,6 +14,9 @@ export class DescriptionComponent{
     loading:boolean;
     error:string;
     product:DescriptionModel;
+    danger:string = "danger";
+    list:Array<number>;
+    x:number;
     constructor(private store:Store<DescriptionState>,
                 private _route:ActivatedRoute){
         
@@ -22,6 +25,8 @@ export class DescriptionComponent{
         this.loading = false;
         this.product = {brand:"",cost:0,countInStock:0,image:"",name:"",numReviews:0,rating:0,_id:"",description:""};
         this.error = "";
+        this.list = [0];
+        this.x=0;
     }
 
     _subscription(){
@@ -30,6 +35,7 @@ export class DescriptionComponent{
             this.loading = loading;
             this.product = description_product;
             this.error = error;
+            this.list = [...Array(this.product.countInStock).keys()];
         },(errRes)=>{
             console.log(errRes);
         })

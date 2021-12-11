@@ -157,6 +157,34 @@ h2{
     color: green;
 }
 
+.row.top{
+    justify-content: flex-start;
+}
+
+.col-2{
+    flex: 2 1 50rem;
+}
+
+.col-1{
+    flex: 1 1 25rem;
+}
+
+img.large{
+    width: 100%;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li{
+    margin-top: 1rem;
+}
+
+
+
 
 
 

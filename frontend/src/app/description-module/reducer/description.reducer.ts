@@ -23,7 +23,7 @@ const _descriptionReducer = createReducer(initialState,on(description,(state)=>{
 }),on(descriptionFail,(state,action)=>{
     return{
         ...state,
-        loading:false,
+        loading:true,
         description_product:{_id:"",brand:"",cost:0,countInStock:0,description:"",image:"",name:"",numReviews:0,rating:0},
         error:action.error  
     }

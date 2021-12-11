@@ -9,15 +9,12 @@ import { ProductEffects } from "../effects/product.effects";
 import { ProductReducer } from "../reducer/product.reducer";
 import { ProductsService } from "../services/product.service";
 import { ProductsComponent } from "src/app/components/products.component";
-import { MessageComponent } from "src/app/components/message.component";
-import { RatingComponent } from "src/app/components/rating.component";
 import { SharedModule } from "src/app/common/module/shared.module";
 
 @NgModule({
     declarations:[HomeComponent,
-                  ProductsComponent,
-                  MessageComponent,
-                  RatingComponent],
+                  ProductsComponent
+                  ],
     imports:[CommonModule,
              HttpClientModule,
              RouterModule.forChild([{path:"",component:HomeComponent}]),

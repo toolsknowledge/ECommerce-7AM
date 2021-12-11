@@ -4,11 +4,84 @@
 </div>
 
 <ng-template #elseBlock>
-    <div *ngIf="error == 'Network Error';else elseBlock1">
-        Error......
+    <div *ngIf="error == 'Network Fail';else productBlock">
+        <alert-component [variant]="danger" [message]="error"></alert-component>
     </div>
 </ng-template>
 
-<ng-template #elseBlock1>
-    {{product}}
+<ng-template #productBlock>
+    <a [routerLink]="['/']"><i class="fa fa-home" style="color: gray;font-size: 20px;margin: 10px;"></i></a>
+    <div class="row top">
+        <div class="col-2">
+            <img src="{{product.image}}" alt="{{product.name}}" class="large">
+        </div>
+        <div class="col-1">
+            <ul>
+                <li>
+                    <h1>{{product.name}}</h1>
+                </li>
+                <li>
+                    <app-rating [rating]="product.rating" [numReviews]="product.numReviews"></app-rating>
+                </li>
+                <li>
+                    Cost ${{product.cost}}
+                </li>
+                <li>
+                    {{product.description}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-1">
+            <div class="card card-body">
+                <ul>
+                    <li>
+                        <div class="row">
+                            <div>Name</div>
+                            <div>{{product.name}}</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div>Price</div>
+                            <div>${{product.cost}}</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div>Availability</div>
+                            <div *ngIf="product.countInStock>0;else elseBlock" >
+                                <span [ngStyle]="{color:'green'}">Stock Available</span>
+                            </div>
+                            <ng-template #elseBlock>
+                                <span [ngStyle]="{color:'red'}">Not Available</span>
+                            </ng-template>
+                        </div>
+                    </li>
+                    <li>
+                        <div *ngIf="product.countInStock>0;else displayBlock">
+                            <li>
+                                <div class="row">
+                                    <div>Qty</div>
+                                    <div>
+                                       <select>
+                                           <option *ngFor="let x of list;let i=index">
+                                               {{i+1}}
+                                           </option>
+                                       </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div>
+                            <ng-template #displayBlock>
+
+                            </ng-template>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
 </ng-template>
