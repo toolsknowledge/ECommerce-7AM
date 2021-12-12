@@ -18,7 +18,8 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     BarRatingModule,
     RouterModule.forRoot([{path:"",loadChildren:()=>import("./HomeModule/module/home.module").then(posRes=>posRes.HomeModule)},
-    {path:"description/:_id",loadChildren:()=>import("./description-module/module/description.module").then(posRes=>posRes.DescriptionModule)}
+    {path:"description/:_id",loadChildren:()=>import("./description-module/module/description.module").then(posRes=>posRes.DescriptionModule)},
+    {path:"cart/:_id",loadChildren:()=>import("./cart-module/module/cart.module").then(m=>m.CartModule)}
  ])
   ],
   providers: [],

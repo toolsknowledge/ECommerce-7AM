@@ -63,13 +63,16 @@
                                 <div class="row">
                                     <div>Qty</div>
                                     <div>
-                                       <select>
+                                       <select [(ngModel)]="qty">
                                            <option *ngFor="let x of list;let i=index">
                                                {{i+1}}
                                            </option>
                                        </select>
                                     </div>
                                 </div>
+                            </li>
+                            <li>
+                                <button class="primary block" (click)="addToHandler(product._id)">Add to Cart</button>
                             </li>
                         </div>
                         <div>

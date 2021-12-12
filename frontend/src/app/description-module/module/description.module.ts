@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { EffectsModule } from "@ngrx/effects";
 import { StoreModule } from "@ngrx/store";
@@ -14,6 +15,7 @@ import { DescriptionService } from "../service/description.service";
     declarations:[DescriptionComponent],
     imports:[CommonModule,
              SharedModule,
+             FormsModule,
              RouterModule.forChild([{path:"",component:DescriptionComponent}]),
              HttpClientModule,
              EffectsModule.forFeature([DescriptionEffects]),

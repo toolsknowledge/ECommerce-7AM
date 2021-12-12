@@ -618,6 +618,47 @@ Module-2
 
 
 
+Module3   (CartModule)
+*******   ************
+
+1) create the module with CartComponent
+
+
+*********************************************************************
+cart-module
+         component
+            cart.component.ts
+            cart.component.html
+
+         module
+            cart.module.ts
+*********************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
