@@ -635,6 +635,67 @@ cart-module
 *********************************************************************
 
 
+2) implement the state management
+
+
+=> http://localhost:8080/api/products/{id}
+
+
+*****************************************************************
+cart-module
+        model
+           cart.model.ts
+                finally "CartModel" is ready
+
+        service
+            cart.service.ts
+                finally "CartService" is ready with "getProduct(-)" function
+
+        types
+            cart.types.ts
+                finally "ADD_CART" type is ready
+
+        actions
+            cart.actions.ts
+                finally "addToCart" action is ready
+
+        effects
+            cart.effects.ts
+
+        reducer 
+            cart.reducer.ts
+
+        selector
+            cart.selector.ts
+        
+        component
+            cart.component.ts
+            cart.component.html
+***********************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
