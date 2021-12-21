@@ -661,12 +661,19 @@ cart-module
 
         effects
             cart.effects.ts
+                finally "CartEffects" is ready
+
+        state
+            cart.state.ts
+                finally "CartState" is ready
 
         reducer 
             cart.reducer.ts
+                finally "CartReducer" is ready
 
         selector
             cart.selector.ts
+                finally "cartSelector" is ready
         
         component
             cart.component.ts
