@@ -9,13 +9,13 @@ const initialState:CartState = {
 const _cartReducer = createReducer(initialState,on(addToCartSuccess,(state:any,action:any)=>{
     const item = action.product;
     const id = action.id;
-    const index = initialState.CartItems.findIndex((element,index)=>{
+    const existedItem = initialState.CartItems.findIndex((element,index)=>{ 
         return element._id === id;
-    })
-    if(index != -1){
+    });
+    if(existedItem!=-1){
         return{
             ...state,
-            CartItems : initialState.CartItems.map((element,index)=>{
+            CartItems:initialState.CartItems.map((element,index)=>{
                 return element._id === id?item:element
             })
         }

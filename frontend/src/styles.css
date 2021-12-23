@@ -215,6 +215,16 @@ button.block{
   button.primary{
     background-color: #f0c040;
   }
+
+
+.badge{
+    background-color: #ffa500;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 50%;
+    font-weight: bold;
+    color: red;
+}
   
 
 

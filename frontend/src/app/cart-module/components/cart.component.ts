@@ -20,12 +20,9 @@ export class CartComponent{
         this.route.queryParams.subscribe((params)=>{
             this.qty = parseInt(params.qty);
         })
-
-        console.log("_id",this._id, typeof this._id);
-        console.log("qty",this.qty, typeof this.qty);
+  
 
         this.store.select(cartSelector).subscribe((posRes:CartModel[] | any)=>{
-            console.log(posRes);
             this.records = posRes;
         },(errRes)=>{
             console.log(errRes);
