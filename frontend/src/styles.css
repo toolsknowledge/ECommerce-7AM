@@ -225,7 +225,32 @@ button.block{
     font-weight: bold;
     color: red;
 }
+
+.row.top{
+    align-items: flex-start;
+}
   
+.col-2{
+    flex: 2 1 50rem;
+}
+
+.col-1{
+    align-items: flex-end;
+    flex: 1 1 25rem;
+}
+
+img.small{
+    max-width: 5rem;
+    width: 100%;
+}
+
+.min-30{
+    min-width: 30rem;
+    color: red;
+}
+
+
+
 
 
 

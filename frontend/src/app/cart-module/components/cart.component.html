@@ -1,1 +1,47 @@
-<h1>{{records | json}}</h1>
+<div class="row top">
+    <div class="col-2">
+        <h1>Shopping Cart</h1>
+        <div *ngIf="records.length === 0;else elseBlock">
+            <alert-component [variant]="danger" [message]="empty_message"></alert-component>
+        </div>
+    </div>
+
+    <div class="col-1">
+
+    </div>
+
+    <ng-template #elseBlock>
+        <ul>
+            <div *ngFor="let item of records">
+                <li>
+                    <div class="row">
+                        <div>
+                            <img src={{item.image}} class="small">
+                        </div>
+
+                        <div>
+                            <a [routerLink]="['/']" class="min-30">{{item.name}}</a>
+                        </div>
+
+                        <div>
+                            <select>
+                                <option>{{item.countInStock}}</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            $ {{item.cost}}
+                        </div>
+
+                        <div>
+                            <button>Delete</button>
+                        </div>
+                    </div>
+                    
+                </li>
+            </div>
+        </ul> 
+    </ng-template>
+</div>
+
+<!-- <h1>{{records | json}}</h1> -->
