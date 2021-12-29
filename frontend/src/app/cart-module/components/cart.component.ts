@@ -16,6 +16,7 @@ export class CartComponent{
     records:CartModel[] = [];
     danger:any;
     empty_message:any;
+    records1:any[];
     constructor(private route:ActivatedRoute,
                 private store:Store<CartState>){
         this.danger = "danger";
@@ -29,7 +30,25 @@ export class CartComponent{
         this.store.select(cartSelector).subscribe((posRes:CartModel[] | any)=>{
             this.records = posRes;
             const { CartItems } = posRes;
+            
             this.records = CartItems;
+        
+            console.log(this.records);
+
+            
+            
+                this.records1 = CartItems.map((element:any,index:any)=>{
+                    if(Object.keys(element).includes("countInStock")){
+                        return [...Array(element.countInStock).keys()]
+                    }else{
+                        return element;
+                    }
+                })
+            
+                console.log(this.records1);
+
+
+        
         },(errRes)=>{
             console.log(errRes);
         })

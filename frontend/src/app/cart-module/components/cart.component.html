@@ -24,12 +24,16 @@
                         </div>
 
                         <div>
-                            <select>
-                                <option>{{item.countInStock}}</option>
+                            Hello.....{{item.qty}}
+                            <select [(ngModel)]="{{item[qty]}}">
+                                <!-- <option *ngFor="let y of records1">
+                                    {{y}}
+                                </option> -->
+                                
                             </select>
                         </div>
 
-                        <div>
+                         <div>
                             $ {{item.cost}}
                         </div>
 

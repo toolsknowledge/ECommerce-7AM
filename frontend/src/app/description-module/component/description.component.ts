@@ -39,6 +39,7 @@ export class DescriptionComponent{
             this.product = description_product;
             this.error = error;
             this.list = [...Array(this.product.countInStock).keys()];
+            
         },(errRes)=>{
             console.log(errRes);
         })
